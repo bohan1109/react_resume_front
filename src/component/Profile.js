@@ -16,7 +16,7 @@ export default function FormDialog(props) {
   const [open2, setOpen2] = React.useState(false);
   const [name, setName] = React.useState("");
   const [newName, setNewName] = React.useState("");
-  const [account, setAccount] = React.useState(props.account);
+  const [account] = React.useState(props.account);
   const [email, setEmail] = React.useState("");
   const [newEmail, setNewEmail] = React.useState("");
   const [error, setError] = React.useState("");

@@ -14,7 +14,6 @@ export default function FormDialog(props) {
   const [open, setOpen] = React.useState(false);
   const [open1, setOpen1] = React.useState(false);
   const [message, setMessage] = React.useState(props.content);
-  const [error, setError] = React.useState("");
 
 
   const handleClickOpen = () => {
