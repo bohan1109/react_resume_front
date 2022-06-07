@@ -1,0 +1,86 @@
+div #resume {
+    margin: 0 auto;
+    width: 50vw;
+    height: auto;
+    margin-top: 20px;
+    border: solid 1px rgb(215, 215, 216);
+    @apply p-16 shadow-md;
+  }
+
+  .flex{
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+  }
+  .skilldiv hr {
+    @apply my-2;
+  }
+  .projectdiv {
+    @apply pl-5;
+  }
+  .Cergrid {
+    @apply grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 px-5 w-full;
+  }
+  .img {
+    width: 30px;
+    height: 30px;
+    float: left;
+    @apply mr-3 ;
+  }
+  .hr {
+    @apply leading-[1em] relative outline-0 border-0 text-center h-[1.5em] opacity-50;
+  }
+  .hr::before {
+    @apply absolute w-full h-[3px] left-0 top-1/2 content-[''] bg-gradient-to-r from-transparent via-blue-400 to-transparent;
+  }
+  .title {
+    @apply text-3xl mt-5 ml-3;
+  }
+  .content {
+    @apply mx-8 mt-1;
+  }
+  .name {
+    @apply text-3xl mt-5 ml-4;
+  }
+  .projectname {
+    @apply text-2xl mt-4 ml-5;
+  }
+  .projectcontent {
+    @apply mt-4 ml-7;
+  }
+  .content_work {
+    @apply mx-7 mt-3 float-left font-extrabold;
+  }
+  .content_time {
+    @apply mx-7 mt-3 float-right;
+  }
+  .skillgird {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 px-4 w-full;
+  }
+  .skilldiv {
+    @apply w-full m-2;
+  }
+  
+  .skilltitle {
+    @apply text-lg font-bold my-0;
+  }
+  .basic {
+    @apply flex w-full justify-between;
+  }
+  .left {
+    @apply w-8/12 relative flex-col break-all;
+  }
+  .picture {  
+    @apply w-36 h-36 mt-5 items-center;
+  }
+  .projectname::before {
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    @apply rounded-full absolute -left-4 mt-1 z-10 border-0 bg-cyan-100;
+  }
+  .projectcontent::before {
+    content: "";
+    left: -6.5px;
+    @apply rounded absolute mt-1 w-1 sm:h-4/5 md:h-4/5 xl:h-3/5 2xl:h-3/5 lg:h-3/5 z-10 border-0 bg-cyan-100;
+  }
