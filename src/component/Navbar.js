@@ -98,8 +98,8 @@ export default function MenuAppBar(props) {
     event.preventDefault();
     await axios
       .post("api/login", {
-        account: process.env.GUEST_ACCOUNT,
-        password: process.env.GUEST_PASSWORD,
+        account: process.env.REACT_APP_GUEST_ACCOUNT,
+        password: process.env.REACT_APP_GUEST_PASSWORD,
       })
       .then((response) => {
         const token = response.data.token;
@@ -109,6 +109,7 @@ export default function MenuAppBar(props) {
         //setLogin(true);
         setOpen(false);
       }).catch((error) => {
+        console.log(error)
       });
   }
   
@@ -156,11 +157,6 @@ export default function MenuAppBar(props) {
             email: email,
           })
           .then(async (response) => {
-            setName("")
-            setAccount("")
-            setPassword("")
-            setEmail("")
-            setAgainPassword("")
             await axios
               .post("api/login", {
                 account: account,
@@ -173,6 +169,11 @@ export default function MenuAppBar(props) {
                 props.setA(!props.a);
                 setLogin(true);
                 setOpen(false);
+                setName("")
+                setAccount("")
+                setPassword("")
+                setEmail("")
+                setAgainPassword("")
               })
               .catch((err) => {
                 setLoginError(err.response.data.message)
